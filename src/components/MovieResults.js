@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Search from './Search';
+import {connect} from 'react-redux';
+import MovieItem from './MovieItem';
 
 class MovieResults extends Component{
     render(){
@@ -7,9 +9,19 @@ class MovieResults extends Component{
             <div>
             <h1>Movie Results</h1>
             <Search/>
+                {this.props.movies.map(item=>{
+                    return item.title
+                })}
             </div>
         )
     }
 }
 
-export default MovieResults;
+function mapStateToProps(state) {
+    console.log(state);
+    return{
+        movies:state.movies
+    }
+}
+
+export default connect(mapStateToProps,null)(MovieResults);
