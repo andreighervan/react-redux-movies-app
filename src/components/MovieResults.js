@@ -10,7 +10,7 @@ class MovieResults extends Component{
             <h1>Movie Results</h1>
             <Search/>
                 {this.props.movies.map(item=>{
-                    return item.title
+                    return <MovieItem key={item.id} movie={item}/>;
                 })}
             </div>
         )
