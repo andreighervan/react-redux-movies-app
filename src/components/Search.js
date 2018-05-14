@@ -25,7 +25,7 @@ class Search extends Component {
         return (
             <div>
                 <Form inline className="col-md-12 col-md-offset-4">
-                    <FormGroup><ControlLabel>Search</ControlLabel>{' '}</FormGroup>
+                    <FormGroup><ControlLabel>Search</ControlLabel></FormGroup>{'  '}
                     <FormControl type="text" placeholder="wonder woman"
                                  onChange={(event) => this.setState({query: event.target.value})}/>{' '}
                     <Button bsStyle="success" onClick={() => this.search()}>Submit</Button>
