@@ -3,11 +3,13 @@ import Search from './Search';
 import {connect} from 'react-redux';
 import MovieItem from './MovieItem';
 import {BrowserRouter as Router,Link} from 'react-router-dom';
+import FavoriteMovieList from './FavoriteMovieList';
 
 class MovieResults extends Component {
     render() {
         return (
             <div>
+                <FavoriteMovieList/>
                 <Router>
                 <Link to="/fav">Favorite</Link>
                 </Router>
