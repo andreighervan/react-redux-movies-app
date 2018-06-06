@@ -12,13 +12,13 @@ class MovieItem extends Component{
             favorited:false
         }
     }
-    removeFromFavorite(){
-        this.setState({favorited:!this.state.favorited});
-        this.props.removeFromFavorite(this.props.movie);
-    }
     addToFavorite(){
         this.setState({favorited:!this.state.favorited});
         this.props.addToFavorite(this.props.movie);
+    }
+    removeFromFavorite(){
+        this.setState({favorited:!this.state.favorited});
+        this.props.removeFromFavorite(this.props.movie);
     }
     displayFav(){
         if(!this.state.favorited){

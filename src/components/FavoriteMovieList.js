@@ -5,13 +5,13 @@ import {BrowserRouter as Router,Link} from 'react-router-dom';
 
 class FavoriteMovieList extends Component {
     render() {
-        console.log(this.props.favorited);
+        console.log(this.props.favorites);
         return (
             <div>
                 <Router>
                 <Link to="/">Home</Link>
                 </Router>
-                <h4>{this.props.favorited.map(movie => {
+                <h4>{this.props.favorites.map(movie => {
                     return <MovieItem movie={movie} key={movie.id} showButton={false}/>
                 })}</h4>
             </div>
@@ -22,7 +22,7 @@ class FavoriteMovieList extends Component {
 function mapStateToProps(state) {
     console.log('FavoriteMovieList', state);
     return {
-        favorited: state.favorited
+        favorites: state.favorites
     };
 }
 

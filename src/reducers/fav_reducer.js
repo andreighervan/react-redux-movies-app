@@ -7,6 +7,7 @@ export default function addToFavorite(state=[],action) {
             let favoriteMovies=[...state,action.movie];
             return favoriteMovies;
         case REMOVE_FAV:
+            console.log('Movies removed:',action.movie);
             favoriteMovies=state.filter(item=>item.id!==action.movie.id);
             return favoriteMovies;
         default:

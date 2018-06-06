@@ -17,7 +17,8 @@ class App extends Component {
           <div className="row">
               <Router>
                   <Switch>
-                      <Route path="/fav" component={FavoriteMovieList}/>
+                      <Route exact path='/' component={MovieResults} />
+                      <Route path='/fav' component={FavoriteMovieList} />
                   </Switch>
               </Router>
           </div>
