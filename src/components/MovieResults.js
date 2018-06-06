@@ -9,7 +9,6 @@ class MovieResults extends Component {
     render() {
         return (
             <div>
-                <FavoriteMovieList/>
                 <Router>
                 <Link to="/fav">Favorite</Link>
                 </Router>
